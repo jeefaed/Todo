@@ -6,6 +6,7 @@ document.getElementById('todo-form').addEventListener('submit', function (event)
     let todoText = document.createTextNode(todoInput.value);
     let deleteButton = document.createElement('button');
     let editButton = document.createElement('button');
+    editButton.classList = 'edit-button'
     let deleteText = document.createTextNode('Удалить');
     let editText = document.createTextNode('Редактировать');
     deleteButton.appendChild(deleteText);
@@ -52,6 +53,7 @@ window.onload = function () {
             let todoText = document.createTextNode(todo);
             let deleteButton = document.createElement('button');
             let editButton = document.createElement('button');
+            editButton.classList = 'edit-button'
             let deleteText = document.createTextNode('Удалить');
             let editText = document.createTextNode('Редактировать');
             deleteButton.appendChild(deleteText);
