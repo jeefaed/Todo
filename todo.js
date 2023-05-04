@@ -32,8 +32,14 @@ document.getElementById('todo-form').addEventListener('submit', function (event)
         }
     });
 
+    todoItem.addEventListener('click', markCompleted);
+
     updateLocalStorage();
 });
+
+function markCompleted(event) {
+    event.target.classList.toggle('completed');
+}
 
 function updateLocalStorage() {
     let todos = [];
@@ -76,6 +82,8 @@ window.onload = function () {
                     updateLocalStorage();
                 }
             });
+
+            todoItem.addEventListener('click', markCompleted);
         });
     }
 }
